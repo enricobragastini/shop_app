@@ -16,15 +16,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => ProductsProvider(),
+      create: (ctx) => ProductsProvider(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'MyShop',
         theme: ThemeData(
             fontFamily: "Lato",
             primarySwatch: Colors.purple,
             colorScheme: ColorScheme.fromSwatch()
                 .copyWith(secondary: Colors.deepOrange)),
-        home: ProductOverviewScreen(),
+        home: const ProductOverviewScreen(),
         routes: {
           ProductDetailScreen.routeName: (context) =>
               const ProductDetailScreen(),
