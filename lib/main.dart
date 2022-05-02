@@ -6,6 +6,7 @@ import './screens/products_overview_screen.dart';
 import './screens/cart_screen.dart';
 import './screens/orders_screen.dart';
 import './screens/user_products_screen.dart';
+import 'screens/edit_product_screen.dart';
 
 import './providers/products_provider.dart';
 import './providers/cart_provider.dart';
@@ -38,12 +39,12 @@ class MyApp extends StatelessWidget {
                     .copyWith(secondary: Colors.deepOrange)),
             home: const ProductOverviewScreen(),
             routes: {
-              ProductDetailScreen.routeName: (context) =>
+              ProductDetailScreen.routeName: (ctx) =>
                   const ProductDetailScreen(),
-              CartScreen.routeName: (context) => const CartScreen(),
-              OrdersScreen.routeName: (context) => const OrdersScreen(),
-              UserProductsScreen.routeName: ((context) =>
-                  const UserProductsScreen())
+              CartScreen.routeName: (ctx) => const CartScreen(),
+              OrdersScreen.routeName: (ctx) => const OrdersScreen(),
+              UserProductsScreen.routeName: (ctx) => const UserProductsScreen(),
+              EditProductScreen.routeName: (ctx) => const EditProductScreen()
             },
           ),
         ));
